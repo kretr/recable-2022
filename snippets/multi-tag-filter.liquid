@@ -1,0 +1,65 @@
+{% if collection.all_tags.size > 0 %}
+  {{ 'multi-tag-filter.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'multi-tag-filter.js' | asset_url }}" defer="defer"></script>
+
+  <div class="multi-tag-filter__container">
+    <h2>Filtern</h2>
+  
+    <div class="tag-filter tag-filter__connector" data-filter-id="connector">
+      <div class="tag-filter--title">Anschlüsse</div>
+      <div class="tag-filter--content">
+        {% for tag in collection.all_tags %}
+          {% if tag contains 'Anschlüsse: ' %} 
+            <div class="tag-filter--item">
+              <input type="radio" id="{{ tag | handle }}" name="connector" value="{{ tag | handle}}" {% if current_tags contains tag %}checked{% endif %}>
+              <label for="{{ tag | handle }}">{{ tag | remove_first: 'Anschlüsse: ' }}</label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="tag-filter tag-filter__color" data-filter-id="color">
+      <div class="tag-filter--title">Farbe</div>
+      <div class="tag-filter--content two-cols">
+        {% for tag in collection.all_tags %}
+          {% if tag contains 'Farbe: ' %} 
+            <div class="tag-filter--item">
+              <input type="checkbox" id="{{ tag | handle }}" name="color" value="{{ tag | handle}}" {% if current_tags contains tag %}checked{% endif %}>
+              <label for="{{ tag | handle }}">{{ tag | remove_first: 'Farbe: ' }}</label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  
+    <div class="tag-filter tag-filter__material" data-filter-id="material">
+      <div class="tag-filter--title">Material</div>
+      <div class="tag-filter--content">
+        {% for tag in collection.all_tags %}
+          {% if tag contains 'Material: ' %} 
+            <div class="tag-filter--item">
+              <input type="radio" id="{{ tag | handle }}" name="material" value="{{ tag | handle}}" {% if current_tags contains tag %}checked{% endif %}>
+              <label for="{{ tag | handle }}">{{ tag | remove_first: 'Material: ' }}</label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  
+    <div class="tag-filter tag-filter__design" data-filter-id="design">
+      <div class="tag-filter--title">Design</div>
+      <div class="tag-filter--content">
+        {% for tag in collection.all_tags %}
+          {% if tag contains 'Design: ' %} 
+            <div class="tag-filter--item">
+              <input type="radio" id="{{ tag | handle }}" name="design" value="{{ tag | handle}}" {% if current_tags contains tag %}checked{% endif %}>
+              <label for="{{ tag | handle }}">{{ tag | remove_first: 'Design: ' }}</label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+    
