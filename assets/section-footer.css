@@ -119,10 +119,10 @@
 
 .footer-block--newsletter {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
-  margin-top: 3rem;
+  align-items: normal;
 }
 
 .footer-block--newsletter:only-child {
