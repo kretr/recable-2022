@@ -1,0 +1,174 @@
+{% comment %}
+    Renders a table with product specifications.
+{% endcomment %}
+
+{%- if product and product != empty -%}
+{%- liquid
+    assign product_variant = product.selected_or_first_available_variant
+
+    assign vegan = '<br><a href="https://www.recable.it/apps/frequently-asked-questions?faq-section-id=30689&faq-article-id=137450" target="_blank">vegan</a>'
+    assign weight = '57 g'
+    assign color = ''
+    assign power = 'undef.'
+    assign input = 'undef.'
+    assign output = 'undef.'
+    assign solder = ''
+    assign kabel = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-kabel-4-litzen-usb-2-0">Kabel mit 4 Litzen</a>'
+    assign radius = '3 cm'
+    assign tubing = 'undef.'
+    assign material = '-'
+
+    if product_variant.option1 == '0,25 m'
+      assign weight = '8 g'
+    endif
+    if product_variant.option1 == '0,5 m'
+      assign weight = '13 g'
+    endif
+    if product_variant.option1 == '0,75 m'
+      assign weight = '18 g'
+    endif
+    if product_variant.option1 == '1,0 m'
+      assign weight = '23 g'
+    endif
+    if product_variant.option1 == '1,25 m'
+      assign weight = '27 g'
+    endif
+    if product_variant.option1 == '1,5 m'
+      assign weight = '30 g'
+    endif
+    if product_variant.option1 == '2,0 m'
+      assign weight = '39 g'
+    endif
+    if product_variant.option1 == '2,5 m'
+      assign weight = '48 g'
+    endif
+
+    assign weightOptions = 'data-0-25-m="8 g" data-0-5-m="13 g" data-0-75-m="18 g" data-1-0-m="23 g" data-1-25-m="27 g" data-1-5-m="30 g" data-2-0-m="39 g" data-2-5-m="48 g"'
+
+    for tag in product.tags
+      if tag contains 'USB C'
+        assign solder = '<tr><th style="text-align: left;">Lötzinn</th><td>fair<br>konfiktfrei<br>bleifrei<br>recycelt</td></tr>'
+      endif
+
+      if tag contains 'Lightning'
+        assign vegan = ''
+
+        if product_variant.option1 == '0,25 m'
+          assign weight = '11 g'
+        endif
+        if product_variant.option1 == '0,5 m'
+          assign weight = '16 g'
+        endif
+        if product_variant.option1 == '0,75 m'
+          assign weight = '21 g'
+        endif
+        if product_variant.option1 == '1,0 m'
+          assign weight = '26 g'
+        endif
+        if product_variant.option1 == '1,25 m'
+          assign weight = '30 g'
+        endif
+        if product_variant.option1 == '1,5 m'
+          assign weight = '33 g'
+        endif
+        if product_variant.option1 == '2,0 m'
+          assign weight = '42 g'
+        endif
+        if product_variant.option1 == '2,5 m'
+          assign weight = '51 g'
+        endif
+
+        assign weightOptions = 'data-0-25-m="11 g" data-0-5-m="16 g" data-0-75-m="21 g" data-1-0-m="26 g" data-1-25-m="30 g" data-1-5-m="33 g" data-2-0-m="42 g" data-2-5-m="51 g"'
+      endif
+
+      if tag contains 'Farbe:'
+        assign color = color | append: tag | append: ', '
+      endif
+
+      if tag contains 'Türkisnaschvogel'
+        assign radius = '4 cm'
+      endif
+    endfor
+
+    if product.tags contains 'Anschlüsse: USB A - USB C'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/usb-a-stecker-usb-2-0-ersatzteil">USB-A</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-4-litzen-usb-2-0">USB-C</a> (mit 56 kΩ Widerstand für optimalen Schutz) fair aus China'
+      assign power = '18 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-a-schrumpfschlauch-set">Schrumpfschlauch USB-A</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-device-schrumpfschlauch-set">Schrumpfschlauch USB-C</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB A - USB C + Lightning (iPhone)'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/usb-a-stecker-usb-2-0-ersatzteil">USB-A</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-4-litzen-usb-2-0">USB-C</a> (mit 56 kΩ Widerstand für optimalen Schutz) fair aus China'
+      assign power = '10 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-a-schrumpfschlauch-set">Schrumpfschlauch USB-A</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-device-schrumpfschlauch-set">Schrumpfschlauch USB-C</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB A - Micro USB'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/usb-a-stecker-usb-2-0-ersatzteil">USB-A</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-micro-usb-stecker-usb-2-0">Micro USB</a> aus China'
+      assign power = '17 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-a-schrumpfschlauch-set">Schrumpfschlauch USB-A</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-micro-usb-stecker-schrumpfschlauch-set">Schrumpfschlauch Micro-USB</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB A - Micro USB + Lightning (iPhone)'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/usb-a-stecker-usb-2-0-ersatzteil">USB-A</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-micro-usb-stecker-usb-2-0">Micro USB</a> + <a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/adapter-micro-usb-lightning-iphone">Lightning Adapter</a> aus China'
+      assign power = '8 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-a-schrumpfschlauch-set">Schrumpfschlauch USB-A</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-micro-usb-stecker-schrumpfschlauch-set">Schrumpfschlauch Micro-USB</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB C - USB C'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-5-litzen-usb-2-0">USB-C</a> aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-5-litzen-usb-2-0">USB-C</a> aus China'
+      assign power = '60 Watt'
+      assign kabel = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-2-0-kabel-5-litzen-0-25-m">Kabel mit 5 Litzen</a>'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-5-polig-schrumpfschlauch-set">Schrumpfschlauch USB-C</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB C - USB C + Lightning (iPhone)'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-5-litzen-usb-2-0">USB-C</a> aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-5-litzen-usb-2-0">USB-C</a> + Lightning Adapter aus China'
+      assign power = '16 Watt'
+      assign kabel = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-2-0-kabel-5-litzen-0-25-m">Kabel mit 5 Litzen</a>'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-5-polig-schrumpfschlauch-set">Schrumpfschlauch USB-C</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB C - Micro USB'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-4-litzen-host-usb-2-0">USB-C</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-micro-usb-stecker-usb-2-0">Micro USB</a> aus China'
+      assign power = '18 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-host-schrumpfschlauch-set">Schrumpfschlauch USB-C</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-micro-usb-stecker-schrumpfschlauch-set">Schrumpfschlauch Micro-USB</a>'
+    endif
+    if product.tags contains 'Anschlüsse: USB C - Micro USB + Lightning (iPhone)'
+      assign input = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-usb-c-stecker-4-litzen-host-usb-2-0">USB-C</a> fair aus China'
+      assign output = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-micro-usb-stecker-usb-2-0">Micro USB</a> + <a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/adapter-micro-usb-lightning-iphone">Lightning Adapter</a> aus China'
+      assign power = '10 Watt'
+      assign tubing = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-usb-c-stecker-host-schrumpfschlauch-set">Schrumpfschlauch USB-A</a><br><a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-steckerummantelung-micro-usb-stecker-schrumpfschlauch-set">Schrumpfschlauch Micro-USB</a>'
+    endif
+
+    if product.tags contains 'Material: recycelbares PET'
+      assign material = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-flechtschlauch-pet-kabel">PET</a><br>fair aus Deutschland <br>recycelbar <br>durchgefärbt <br>robust <br>UV-Stabil'
+    endif
+    if product.tags contains 'Material: recycletes PET'
+      assign material = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-flechtschlauch-pet-kabel?variant=40047178842171">recyceltes PET</a><br>fair aus Deutschland und Italien <br>recycelbar <br>farblos <br>robust <br> UV-Stabil'
+    endif
+    if product.tags contains 'Material: Baumwolle'
+      assign material = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-flechtschlauch-naturfaser-fur-kabel">Baumwolle</a><br>geflochten in Deutschland <br>kompostierbar <br>ungefärbt <br>naturweiß'
+    endif
+    if product.tags contains 'Material: Flachs'
+      assign material = '<a href="https://www.recable.it/collections/usb-kabel_ersatzteile/products/ersatzteil-flechtschlauch-naturfaser-fur-kabel?variant=40049540399163">Flachs</a><br>geflochten in Deutschland <br>kompostierbar <br>ungefärbt <br>grau/braun'
+    endif
+    if product.tags contains 'Material: Basalt'
+      assign material = 'Basalt<br>geflochten in Deutschland <br>recycelbar <br>ungefärbt <br>braun glänzend'
+    endif
+
+-%}
+
+  <table style="width:100%">
+    <tr><th style="text-align: left; width: 200px"><a href="https://www.recable.it/pages/recable-usb-ladekabel-nachhaltigkeit" target="_blank">Nachhaltigkeit</a></th><td>zu 90% recycelbar<br>handgefertigt in Deutschland<br>45 % niedrigerer Co2-Fußabdruck (96,5 g) als ein vergleichbares, herkömmliches USB-Kabel bei 1 m Länge<br><a href="https://www.recable.it/pages/recable-usb-ladekabel-nachhaltigkeit#knick-video" target="_blank">Haltbarkeit</a>: 30.000 Knicke, 10 000 Steckvorgänge<br>recycelte und recycelbare Materialien<br><a href="https://www.recable.it/pages/reparaturanleitungen-usb-kabel" target="_blank">reparierbar</a>{{ vegan }}</td></tr>
+    <tr><th style="text-align: left;">Maße</th><td>Länge: <span class="changable-length">{{ product_variant.option1 }}</span><br>Gewicht: <span class="changable-weight" {{ weightOptions }}>{{ weight }}</span></td></tr>
+    <tr><th style="text-align: left;">Farbe</th><td>{{ color | remove: 'Farbe: ' }}</td></tr>
+    <tr><th style="text-align: left;">USB 2.0</th><td>Energieübertragung bei 1 m Kabellänge (gemessen): {{ power }}<br>detaillierte Informationen unten in der Grafik<br>Datenübertragung: 480 MBit/s</td></tr>
+    <tr><th style="text-align: left;">Stecker</th><td>Input: {{ input }}<br>Output: {{ output }}</td></tr>
+    {{ solder }}
+    <tr><th style="text-align: left;">Steckerüberzug</th><td>{{ tubing }}<br>fair aus Deutschland<br>durchgefärbt<br>abriebfeste Logo-Prägung<br>ISO 14001</td></tr>
+    <tr><th style="text-align: left;">Kabel</th><td>{{ kabel }}<br>fair aus Deutschland<br>Mantel aus Recyclingmaterial<br>40-50 % recycling Anteil im Kupfer<br>halogenfrei (kein PVC)<br>keine Weichmacher<br>keine Schwermetalle<br>Biegeradius: {{ radius }}<br>recycelbar<br>ISO 14001</td></tr>
+    <tr><th style="text-align: left;">Flechtschlauch</th><td>{{ material }}</td></tr>
+    <tr><th style="text-align: left;">Auszeichnungen</th><td>Green Product Award “Consumer Goods” 2022<br>zweiter Platz Bestform Award 2021</td></tr>
+  </table>
+{%- endif -%}

@@ -1,0 +1,108 @@
+{% comment %}
+    Renders the product description automatically build from meta fields.
+{% endcomment %}
+
+{%- if product and product != empty -%}
+  {% liquid
+    assign mainCollection = collections['alles'].metafields
+    assign text_connectors = ''
+    assign text_design = ''
+    assign text_bird = ''
+
+    for tag in product.tags
+      if tag contains 'Anschlüsse: '
+        case tag
+          when 'Anschlüsse: USB A - USB C'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_a_zu_usb_c
+          when 'Anschlüsse: USB A - USB C + Lightning (iPhone)'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_a_zu_usb_c_ln
+          when 'Anschlüsse: USB A - Micro USB'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_a_zu_micro_usb
+          when 'Anschlüsse: USB A - Micro USB + Lightning (iPhone)'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_a_micro_usb_ln
+          when 'Anschlüsse: USB C - USB C'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_c_zu_usb_c
+          when 'Anschlüsse: USB C - USB C + Lightning (iPhone)'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_c_zu_usb_c_ln
+          when 'Anschlüsse: USB C - Micro USB'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_c_zu_micro_usb
+          when 'Anschlüsse: USB C - Micro USB + Lightning (iPhone)'
+            assign text_connectors = mainCollection.my_fields.anschluesse_usb_c_micro_usb_ln
+        endcase
+      endif
+
+      if tag contains 'Design: '
+        case tag
+          when 'Design: Blaumeise'
+            assign text_design = mainCollection.my_fields.design_blaumeise
+            assign text_bird = mainCollection.my_fields.vogel_blaumeise
+          when 'Design: Eisvogel'
+            assign text_design = mainCollection.my_fields.design_eisvogel
+            assign text_bird = mainCollection.my_fields.vogel_eisvogel
+          when 'Design: Flammenlaubenvogel'
+            assign text_design = mainCollection.my_fields.design_flammenlaubenvogel
+            assign text_bird = mainCollection.my_fields.vogel_flammenlaubenvogel
+          when 'Design: Gelbbrustara'
+            assign text_design = mainCollection.my_fields.design_gelbbrustara
+            assign text_bird = mainCollection.my_fields.vogel_gelbbrustara
+          when 'Design: Gelbkehlvireo'
+            assign text_design = mainCollection.my_fields.design_gelbkehlvireo
+            assign text_bird = mainCollection.my_fields.vogel_gelbkehlvireo
+          when 'Design: Goldschnäpper'
+            assign text_design = mainCollection.my_fields.design_goldschnaepper
+            assign text_bird = mainCollection.my_fields.vogel_goldschnaepper
+          when 'Design: Gouldamadine'
+            assign text_design = mainCollection.custom.design_gouldamadine
+            assign text_bird = mainCollection.custom.vogel_gouldamadine
+          when 'Design: Helmkasuar'
+            assign text_design = mainCollection.my_fields.design_helmkasuar
+            assign text_bird = mainCollection.my_fields.vogel_helmkasuar
+          when 'Design: Kakapo'
+            assign text_design = mainCollection.my_fields.design_kakapo
+            assign text_bird = mainCollection.my_fields.vogel_kakapo
+          when 'Design: Kubaflamingo'
+            assign text_design = mainCollection.my_fields.design_kubaflamingo
+            assign text_bird = mainCollection.my_fields.vogel_kubaflamingo
+          when 'Design: Königspinguin'
+            assign text_design = mainCollection.my_fields.design_koenigspinguin
+            assign text_bird = mainCollection.my_fields.vogel_koenigspinguin
+          when 'Design: Pfau'
+            assign text_design = mainCollection.my_fields.design_pfau
+            assign text_bird = mainCollection.my_fields.vogel_pfau
+          when 'Design: Türkisnaschvogel'
+            assign text_design = mainCollection.my_fields.design_tuerkisnaschvogel
+            assign text_bird = mainCollection.my_fields.vogel_tuerkisnaschvogel
+          when 'Design: Unzertrennliche'
+            assign text_design = mainCollection.my_fields.design_unzertrennliche
+            assign text_bird = mainCollection.my_fields.vogel_unzertrennliche
+          when 'Design: Wasserhahn'
+            assign text_design = mainCollection.my_fields.design_wasserhahn
+            assign text_bird = mainCollection.my_fields.vogel_wasserhahn
+          when 'Design: Eisvogel'
+            assign text_design = mainCollection.my_fields.design_eisvogel
+            assign text_bird = mainCollection.my_fields.vogel_eisvogel
+          when 'Design: Weißrückenspecht'
+            assign text_design = mainCollection.my_fields.design_weissrueckenspecht
+            assign text_bird = mainCollection.my_fields.vogel_weissrueckenspecht
+        endcase
+      endif
+    endfor
+  %}
+  
+  <div class="description">
+    <div class="left">
+      {{ text_design }}
+      {{ text_connectors }}
+    </div>
+    <div class="right">
+      <ul class="checkmark-list">
+        <li>ohne Halogene</li>
+        <li>ohne Weichmacher</li>
+        <li>ohne Schwermetalle</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bird-box">
+    {{ text_bird }}
+  </div>
+{%- endif -%}

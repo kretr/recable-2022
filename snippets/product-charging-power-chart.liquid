@@ -1,0 +1,33 @@
+{% comment %}
+    Renders an image for the cable type.
+{% endcomment %}
+
+{%- if product and product != empty -%}
+  <figure>
+      {%- if product.tags contains 'Anschlüsse: USB A - USB C' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_A_C.png?v=1654692950" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="905" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB A-USB C Kabel</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB A - USB C + Lightning (iPhone)' -%}
+        <img src="" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB A-USB C Kabel mit Lightning-Adapter</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB A - Micro USB' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_A_Micro.png?v=1654692951" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="906" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB A-Micro USB Kabel</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB A - Micro USB + Lightning (iPhone)' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_A_LN.png?v=1654692951" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="923" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB A-Micro USB Kabel mit Lightning-Adapter</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB C - USB C' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_C_C.png?v=1654692951" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="869" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB C-USB C Kabel</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB C - USB C + Lightning (iPhone)' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/thumbnail_recable_Ladeleistung_C_C_L.png?v=1654844564" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="905" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB C-USB C Kabel mit Lightning-Adapter</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB C - Micro USB' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_C_Micro.png?v=1654692951" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="906" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB C-Micro USB Kabel</figcaption>
+      {%- elsif product.tags contains 'Anschlüsse: USB C - Micro USB + Lightning (iPhone)' -%}
+        <img src="https://cdn.shopify.com/s/files/1/0364/2585/9131/files/recable_Ladeleistung_C_LN.png?v=1654692951" alt="Diagramm welches den Zusammenhang zwischen Ladeleistung und Kabellänge zeigt" width="1024" height="910" loading="lazy" />
+        <figcaption>Ladeleistung in Abhängigkeit von der Länge des USB C-Micro USB Kabel mit Lightning-Adapter</figcaption>
+      {%- endif -%}
+    </figure>
+{%- endif -%}
