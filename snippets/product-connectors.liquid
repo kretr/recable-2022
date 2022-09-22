@@ -1,0 +1,42 @@
+{% comment %}
+    Renders the descriptions for the connectors of the cable type.
+{% endcomment %}
+
+{%- if product and product != empty -%}
+  {%- assign cMainFields = collections['alles'].metafields.my_fields -%}
+
+  <div class="connectors">
+    {%- for tag in product.tags -%}
+      {%- if tag contains 'Anschlüsse: ' -%}
+        {%- case tag -%}
+          {%- when 'Anschlüsse: USB A - USB C' -%}
+            <div class="item">{{ cMainFields.stecker_usb_a }}</div>
+            <div class="item">{{ cMainFields.stecker_usb_c }}</div>
+          {%- when 'Anschlüsse: USB A - USB C + Lightning (iPhone)' -%}
+            <div class="item">{{ cMainFields.stecker_usb_a }}</div>
+            <div class="item">{{ cMainFields.stecker_lightning }}</div>
+            <div class="item">{{ cMainFields.stecker_usb_c }}</div>
+          {%- when 'Anschlüsse: USB A - Micro USB' -%}
+            <div class="item">{{ cMainFields.stecker_usb_a }}</div>
+            <div class="item">{{ cMainFields.stecker_micro_usb }}</div>
+          {%- when 'Anschlüsse: USB A - Micro USB + Lightning (iPhone)' -%}
+            <div class="item">{{ cMainFields.stecker_usb_a }}</div>
+            <div class="item">{{ cMainFields.stecker_lightning }}</div>
+            <div class="item">{{ cMainFields.stecker_micro_usb }}</div>
+          {%- when 'Anschlüsse: USB C - USB C' -%}
+            <div class="item">{{ cMainFields.stecker_usb_c_5_pol }}</div>
+          {%- when 'Anschlüsse: USB C - USB C + Lightning (iPhone)' -%}
+            <div class="item">{{ cMainFields.stecker_usb_c_5_pol }}</div>
+            <div class="item">{{ cMainFields.stecker_lightning }}</div>
+          {%- when 'Anschlüsse: USB C - Micro USB' -%}
+            <div class="item">{{ cMainFields.stecker_usb_c_host }}</div>
+            <div class="item">{{ cMainFields.stecker_micro_usb }}</div>
+          {%- when 'Anschlüsse: USB C - Micro USB + Lightning (iPhone)' -%}
+            <div class="item">{{ cMainFields.stecker_usb_c_host }}</div>
+            <div class="item">{{ cMainFields.stecker_lightning }}</div>
+            <div class="item">{{ cMainFields.stecker_micro_usb }}</div>
+        {%- endcase -%}
+      {%- endif -%}
+    {% endfor %}
+  </div>
+{%- endif -%}
