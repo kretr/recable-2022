@@ -57,6 +57,16 @@
             "button_label": "#334FB4",
             "secondary_button_label": "#FFFFFF",
             "shadow": "#121212"
+        },
+        "accent-2-light": {
+          "settings": {
+            "background": "#E2F2F1",
+            "background_gradient": "",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#334FB4",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#121212"
           }
         }
       },
