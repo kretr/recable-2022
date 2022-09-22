@@ -222,12 +222,13 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-left: -1.2rem;
   font-size: 1.4rem;
   color: rgb(var(--color-foreground));
+  word-break: normal;
 }
 
 .menu-drawer__account .icon-account {
   height: 2rem;
-  width: 2rem;
-  margin-right: 1rem;
+  width: 1.3em;
+  margin-right: .7em;
 }
 
 .menu-drawer__account:hover .icon-account {
