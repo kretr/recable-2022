@@ -235,6 +235,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   font-size: 1.4rem;
   color: rgb(var(--color-foreground));
   margin-bottom: 0;
+  word-break: normal;
 }
 
 .menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
@@ -243,8 +244,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__account .icon-account {
   height: 2rem;
-  width: 2rem;
-  margin-right: 1rem;
+  width: 1.3em;
+  margin-right: .7em;
 }
 
 .menu-drawer__account:hover .icon-account {
