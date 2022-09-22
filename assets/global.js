@@ -1257,3 +1257,28 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+// Länge und Gewicht anpassen bei Variantenwahl
+const lengthSelect = document.querySelector('select[name="options[Länge]"]');
+
+if(lengthSelect){
+  lengthSelect.addEventListener('change', event => {
+    document.querySelectorAll('.changable-length').forEach(item => {
+      item.innerHTML = event.target.value;
+    });
+    document.querySelectorAll('.changable-weight').forEach(item => {
+      const weightSelector = 'data-' + event.target.value.replace(',','-').replace(' ','-');
+      const newValue = item.getAttribute(weightSelector);
+      if(newValue){
+        item.innerHTML = newValue;
+      };
+    });
+  })
+}
+
+// Herstellerlisten ein-/ausklappen
+document.querySelectorAll('.manufacturer strong').forEach(item => {
+  item.addEventListener('click', e => {
+    e.target.parentNode.classList.toggle('show');
+  });
+});
