@@ -53,7 +53,7 @@
         >
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
             <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="blog__post grid__item article slider__slide slider__slide--full-width">
-              {% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
+              {% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt %}
             </li>
           {%- endfor -%}
         </ul>
@@ -198,6 +198,12 @@
       "id": "show_author",
       "default": false,
       "label": "t:sections.featured-blog.settings.show_author.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": false,
+      "label": "Auszug anzeigen"
     },
     {
       "type": "checkbox",
