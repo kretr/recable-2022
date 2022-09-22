@@ -2881,3 +2881,215 @@ details-disclosure > details {
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
 }
+
+
+/* Produktdaten für Kabel */
+
+.description .right {
+  margin-bottom: 4em;
+  background: #e2f2f1;
+  padding: .5em 1.5em .5em;
+  text-align: left;
+}
+
+.description .checkmark-list {
+  padding-left: 0;
+}
+
+.description .checkmark-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.7em;
+}
+
+.description .checkmark-list li::before {
+  content: '';
+  display: inline-block;
+  background: var(--icon-checkmark) center/contain no-repeat;
+  width: 1.2em;
+  height: 1.2em;
+  position: absolute;
+  left: 0;
+  top: .25em;
+}
+
+.bird-box {
+  margin: 4em 0;
+  background: #e2f2f1;
+  padding: 1.5em;
+}
+
+.bird-box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.bird-box img {
+  float: right;
+  margin-left: 2.5em;
+  border: none !important;
+}
+
+@media screen and (min-width: 640px){
+  .description {
+    display: flex;
+    -moz-column-gap: 2.5em;
+         column-gap: 2.5em;
+    align-items: flex-start;
+  }
+
+  .description .right {
+    width: 320px;
+    flex-shrink: 0;
+    text-align: left;
+  }
+}
+
+.product-usps h3 {
+  font-weight: bold;
+}
+
+.product-usps .item img {
+  border: none;
+}
+
+@media screen and (min-width: 1024px){
+  .product-usps {
+    display: flex;
+  }
+
+  .product-usps .item {
+    padding: 1em;
+    width: 32%;
+  }
+
+  .product-usps .item + .item {
+    margin-left: 2%;
+  }
+}
+
+.charging-power {
+  margin-top: 40px;
+  padding: 40px 0;
+  background: #e4f3f1;
+  display: flex;
+  flex-direction: column;
+}
+
+.charging-power > * {
+  margin: 1em 0;
+  padding: 0 40px;
+}
+
+.charging-power figure img {
+  border: none;
+}
+
+.charging-power figure figcaption {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .charging-power {
+    flex-direction: row;
+  }
+
+  .charging-power > * {
+    width: 50%;
+  }
+}
+
+.cable-certs {
+  background: #6ac0ba;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.cable-certs h2 {
+  padding: 0 1.5em;
+  font-weight: bold;
+  color: inherit;
+}
+
+.cable-certs figure {
+  margin: 1em;
+  height: 60px;
+}
+
+.cable-certs figure img {
+  border: none;
+  height: 100%;
+}
+
+.connectors .item {
+  padding: 2.5em 0 2.5em;
+}
+
+.connectors .item .left-side {
+  padding-right: 2.5em;
+}
+
+.connectors .item .left-side img {
+  border: none;
+  width: 80px;
+}
+
+.connectors .item .left-side h3 {
+  font-weight: bold;
+}
+
+.connectors .item .right-side {
+  background: #e2f2f1;
+  padding: .5em 1.5em .5em;
+  max-width: 320px;
+}
+
+.connectors .item .compat-heading {
+  color: #69bfba;
+}
+
+.connectors .manufacturer strong {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.connectors .manufacturer strong::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+}
+
+.connectors .manufacturer.show strong::after {
+  content: '-';
+}
+
+.connectors .manufacturer ul {
+  display: none;
+  padding-left: 1em;
+}
+
+.connectors .manufacturer.show ul {
+  display: block;
+  margin-top: 0;
+  font-size: .8em;
+}
+
+@media screen and (min-width: 768px){
+  .connectors .item {
+    display: flex;
+  }
+
+  .connectors .item + .item {
+    border-top: 1px solid #959190;
+  }
+
+  .connectors .item .right-side {
+    width: 320px;
+    flex-shrink: 0;
+  }
+}

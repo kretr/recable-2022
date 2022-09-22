@@ -1,0 +1,40 @@
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - region: {String} Product Liquid object (optional)
+
+    Usage:
+    {% render 'product-delivery-time' region: 'de' %}
+{% endcomment %}
+
+{%- if product and product != empty -%}
+  {% liquid
+    assign treshold = 0
+    assign delivery_time_de_instock = '14 Werktage'
+    assign delivery_time_de = '14 Werktage'
+    assign delivery_time_instock = '14 Werktage'
+    assign delivery_time = '14 Werktage'
+
+    assign delivery_time_de_instock = collections['alles'].metafields.my_fields.lieferzeit_de_lagernd
+    assign delivery_time_de = collections['alles'].metafields.my_fields.lieferzeit_de
+    assign delivery_time_instock = collections['alles'].metafields.my_fields.lieferzeit_lagernd
+    assign delivery_time = collections['alles'].metafields.my_fields.lieferzeit
+
+    assign product_variant = product.selected_or_first_available_variant
+
+    if product_variant.inventory_quantity > 500
+      assign treshold = 1000
+    endif
+  %}
+
+  {% if product_variant.inventory_quantity > treshold and region == 'de' %}
+    {{ delivery_time_de_instock }}
+  {% elsif product_variant.inventory_quantity > treshold %}
+    {{ delivery_time_instock }}
+  {% elsif product_variant.inventory_quantity <= treshold and region == 'de' %}
+    {{ delivery_time_de }}
+  {% else %}
+    {{ delivery_time }}
+  {% endif %}
+{%- endif -%}
