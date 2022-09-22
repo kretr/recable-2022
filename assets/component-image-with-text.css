@@ -80,6 +80,11 @@
   z-index: 1;
 }
 
+.image-with-text.full-width .image-with-text__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .image-with-text .grid__item::after {
   content: '';
   position: absolute;
