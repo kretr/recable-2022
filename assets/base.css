@@ -2337,7 +2337,9 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: rgba(var(--color-foreground), .75);
+  height: 4.4rem;
+  width: 4.4rem;
 }
 
 .header__icon span {
@@ -2358,13 +2360,6 @@ input[type='checkbox'] {
   width: 2rem;
   fill: none;
   vertical-align: middle;
-}
-
-.header__icon,
-.header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
-  padding: 0;
 }
 
 .header__icon--cart {
