@@ -121,8 +121,8 @@
 
 .footer-block--newsletter {
   display: flex;
-  align-items: flex-end;
-  margin-top: 3rem;
+  flex-direction: column;
+  align-items: normal;
   gap: 1rem;
 }
 
