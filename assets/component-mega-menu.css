@@ -38,7 +38,7 @@
 .mega-menu__list {
   display: grid;
   gap: 2.4rem 4rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
 }
 
@@ -90,4 +90,53 @@
 
 .mega-menu__list--condensed .mega-menu__link {
   font-weight: normal;
+}
+
+
+.mega-menu__link::before {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .4em;
+  position: relative;
+  top: .25em;
+}
+
+.mega-menu__link::after {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: .4em;
+  position: relative;
+  top: .3em;
+}
+
+#MegaMenu-Content-1 > ul > li:nth-child(1) ul a::before {
+  content: "";
+  background: var(--icon-usb-a) left center/contain no-repeat;
+}
+
+#MegaMenu-Content-1 > ul > li:nth-child(2) ul a::before {
+  content: "";
+  background: var(--icon-usb-c) left center/contain no-repeat;
+}
+
+#MegaMenu-Content-1 > ul > li:not(:nth-child(3)) ul li:nth-child(1) a::after {
+  content: "";
+  background: var(--icon-usb-c) left center/contain no-repeat;
+}
+
+#MegaMenu-Content-1 > ul > li:not(:nth-child(3)) ul li:nth-child(2) a::after {
+  content: "";
+  background: var(--icon-lightning) left center/contain no-repeat;
+}
+
+#MegaMenu-Content-1 > ul > li:not(:nth-child(3)) ul li:nth-child(3) a::after {
+  content: "";
+  background: var(--icon-micro-usb) left center/contain no-repeat;
+}
+
+#MegaMenu-Content-1 > ul > li:not(:nth-child(3)) ul li:nth-child(4) a::after {
+  content: "";
+  background: var(--icon-lightning) left center/contain no-repeat;
 }
