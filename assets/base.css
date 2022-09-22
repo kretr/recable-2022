@@ -2883,6 +2883,90 @@ details-disclosure > details {
 }
 
 
+/* Produktseite */
+
+.tab-collection > .accordion {
+  border: none;
+  margin-top: 0;
+}
+
+.tab-collection > .accordion summary {
+  background: #69bfba;
+  color: #ffffff;
+  padding: .5rem 0 .5rem .5rem;
+  margin-top: 10px;
+}
+
+.tab-collection details[open] summary {
+  background: #fcc51e;
+}
+
+.tab-collection > .accordion summary h2 {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.tab-collection > .accordion .accordion__content {
+  padding: 1.5em 1px;
+}
+
+@media screen and (min-width: 1024px){
+  .tab-collection {
+    position: relative;
+    margin-top: 4em;
+  }
+  
+  .tab-collection > .accordion summary {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 200px;
+  }
+  
+  .tab-collection > .accordion:nth-child(2) summary {
+    left: 210px;
+  }
+  
+  .tab-collection > .accordion:nth-child(3) summary {
+    left: 420px;
+  }
+  
+  .tab-collection > .accordion:nth-child(4) summary {
+    left: 630px;
+  }
+  
+  .tab-collection > .accordion:nth-child(5) summary {
+    left: 840px;
+  }
+}
+
+.image-row {
+  display:  flex;
+  flex-wrap: wrap;
+}
+
+.image-row > .item {
+  width: 100%;
+}
+
+.image-row .content {
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.image-row .content h2 {
+  font-weight: bold;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px){
+  .image-row > .item {
+    width: 50%;
+  }
+}
+
 /* Produktdaten für Kabel */
 
 .description .right {
