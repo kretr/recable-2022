@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "37f26ec6-bb6c-4af0-8551-d199b33eff20": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<table class=\"key-product-features\">\n<tr><td><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_Icons-03.jpg?v=1618997582\" width=\"60\" height=\"60\" alt=\"Icon umweltfreundlich\"><\/td><td>\n<p><strong>nachhaltige Materialien<\/strong> <br>ökologisch, recycelbar & vegan<\/p><\/td><\/tr>\n<tr><td><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_Icons-02.jpg?v=1618997582\" width=\"60\" height=\"60\" alt=\"Icon fair\"><\/td><td><p><strong>fair & respektvoll<\/strong> <br>aus konfliktfreien Rohstoffen fair produziert<\/p><\/td><\/tr>\n<tr><td><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_Icons-08.jpg?v=1618997582\" width=\"60\" height=\"60\" alt=\"Icon umweltfreundlich\"><\/td><td><p><strong>robust & reparierbar<\/strong> <br>übersteht 30.000 Knicke, reparierbares Design<\/p><\/td><\/tr>\n<tr><td><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_Icons-01.jpg?v=1618997582\" width=\"60\" height=\"60\" alt=\"Icon handgefertigt\"><\/td><td><p><strong>in hoher Qualität handgefertigt<\/strong> <br>hochwertig in Deutschland von Hand gemacht<\/p><\/td><\/tr>\n<\/table>"
+          }
+        },
+        "3b40d940-42d2-4c4b-91fa-f5b83f797b4b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Beschreibung",
+            "icon": "none",
+            "custom_liquid": "{{ product.description }}\n\n<div class=\"product-usps\">\n<div class=\"item\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_kabel_mit_graspapierbanderole.jpg?v=1660565433\" alt=\"nachhaltiges USB-Kabel mit umweltfreundlicher Graspapierbanderole\" \/>\n<h3>nachhaltig & vegan*<\/h3>\n<p>recable besteht aus ökologischen Materialien.\nEs ist recycelbar und vegan*. Der CO₂-Fußabdruck unserer Kabel ist nur etwa halb so groß\nwie der konventioneller Kabel.<\/p>\n<p>Verpackt in einer umweltfreundlichen Graspapierbanderole schicken wir\nrecable klimaneutral zu Dir.<\/p>\n<p><small>* Gilt nicht für Lightning-Produkte: Im Klebstoff des Adapters können tierische Inhaltsstoffe enthalten sein.<\/small><\/p>\n<\/div>\n<div class=\"item\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_darstellung_hohe_knickresistenz.jpg?v=1660565361\" alt=\"langlebiges USB-Kabel übersteht mehr als 15000 Knicke\" \/>\n<h3>langlebig & reparierbar<\/h3>\n<p>recable übersteht mehr als 15.000 Knicke in\nbeide Richtungen – also mehr als 30.000\nKnicke insgesamt. Das ist ein sehr guter Wert!<\/p>\n<p>Das USB-Kabel ist nicht vergossen oder verklebt, damit Du es im Fall der Fälle selbst reparieren kannst. Die Reparaturanleitungen\nstellen wir Dir <a href=\"https:\/\/www.recable.it\/pages\/reparaturanleitungen-usb-kabel\" target=\"_blank\">hier<\/a> zur Verfügung.<\/p>\n<\/div>\n<div class=\"item\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/recable_information_einzelteile.jpg?v=1660565384\" alt=\"USB-Kabel aus fairer Produktion und frei von Schadstoffen\" \/>\n<h3>fair & respektvoll<\/h3>\n<p>Unser Kabel wird in Deutschland für Dich von Hand gefertigt. Es besteht fast komplett aus fairen Materialien.<\/p>\n<p>Wir verlöten ausschließlich bleifreies Zinn aus konfliktfreier Herkunft.<\/p>\n<p>Zertifiziert nach\nDodd-Frank enthält recable keine Konfliktmineralien.<\/p>\n<\/div>\n<\/div>",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Technische Daten",
+            "icon": "none",
+            "custom_liquid": "{{ product.metafields.my_fields.technische_daten }}",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kompatibilität",
+            "icon": "none",
+            "custom_liquid": "{{ product.metafields.my_fields.kompatibilitaet }}",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Lieferzeit",
+            "icon": "none",
+            "custom_liquid": "<p>Fairness und Nachhaltigkeit brauchen Ihre Zeit. Erst wenn Du Dein recable bestellst, entsteht es. Mit On-Demand-Fertigung verhindern wir Überproduktionen und sagen damit gemeinsam mit Dir \nElektroschrott den Kampf an. Das heißt aber auch: Bitte habe etwas Geduld. Wir schicken Dein recable so schnell es geht auf die Reise.<\/p>\n<p>Konkret bedeutet das folgende Lieferzeiten<\/p>\n<p>Deutschland: <strong>{% render 'product-delivery-time' region: 'de' %}<\/strong><br \/>\nInternational: <strong>{% render 'product-delivery-time' region: 'world' %}<\/strong><\/p>\n<p>14 Tage Rückgaberecht<\/p>",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "caption",
+        "variant_picker",
+        "quantity_selector",
+        "price",
+        "buy_buttons",
+        "37f26ec6-bb6c-4af0-8551-d199b33eff20",
+        "3b40d940-42d2-4c4b-91fa-f5b83f797b4b",
+        "collapsible-row-2",
+        "collapsible-row-0",
+        "collapsible-row-1"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "medium",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "1651050525e6957585": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"image-row\">\n<div class=\"item\">\n<div class=\"responsive-container\">\n<div class=\"content\" style=\"background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Umweltfreundlicher_Versand.jpg?v=1652431985');\">\n<h2>Umweltfreundlicher <br>Versand<\/h2>\n<p>recable kommt in einer nachhaltigen Verpackung klimaneutral zu Dir.<\/p>\n<\/div>\n<\/div>\n<\/div>\n<div class=\"item\">\n<div class=\"responsive-container\">\n<div class=\"content\" style=\"background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/wildvogelhilfe.jpg?v=1658485088');\">\n<h2>Dein Kauf macht <br>einen Wildvogel satt<\/h2>\n<p>Pro verkauftem Kabel spenden wir eine Futterration für Wildvögel.<\/p>\n<\/div>\n<\/div>\n<\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Das könnte Dir auch gefallen",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "accent-2-light",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651050525e6957585",
+    "product-recommendations"
+  ]
+}
