@@ -1,0 +1,10 @@
+{% if current_tags.size > 0 %}
+  <div class="active-tags__container">
+    <ul class="active-tags">
+      {% for tag in current_tags %}
+        <li>{{ tag | link_to_remove_tag: tag }}</li>
+      {% endfor %}
+    </ul>
+    <a class="remove-all" href="/collections/unsere-bunten-vogel/">alle Filter aufheben</a>
+  </div>
+{% endif %}
