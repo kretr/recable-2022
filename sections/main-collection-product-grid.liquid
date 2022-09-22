@@ -82,7 +82,7 @@
       </aside>
     {%- endif -%}
 
-    <div class="product-grid-container" id="ProductGridContainer">
+    <div class="product-grid-container has-multi-tag-filter" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
@@ -98,6 +98,9 @@
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
     
+            {% render 'multi-tag-filter' %}
+            {% render 'active-tags' %}
+
             <ul id="product-grid" data-id="{{ section.id }}" class="
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop">
