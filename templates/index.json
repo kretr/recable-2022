@@ -6,23 +6,23 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "nachhaltig laden",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "mit recable, dem fairen und reparierbaren USB-Ladekabel",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_label_1": "Entdecken",
+            "button_link_1": "shopify:\/\/collections\/unsere-bunten-vogel",
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -35,114 +35,16 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/recable_banner_home_gpaward.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
+        "stack_images_on_mobile": true,
         "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -151,8 +53,9 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/recable_Icons-03.jpg",
+            "title": "gut für Dich & die Umwelt",
+            "text": "<p>nachhaltige Materialien, reparierbar, zu 90 % recycelbar<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -160,8 +63,9 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/recable_Icons-02.jpg",
+            "title": "fair & respektvoll",
+            "text": "<p>fair produziert, aus konfliktfreien Rohstoffen, vegan<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -169,8 +73,19 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/recable_Icons-01.jpg",
+            "title": "für Dich handgefertigt",
+            "text": "<p>liebevoll in Deutschland von Hand gefertigt (ohne Überproduktion)<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "b31d361c-50f5-44df-b00a-571c434be70b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/recable_Icons-04.jpg",
+            "title": "kompromisslos gut",
+            "text": "<p>schnelles Laden Deines Smartphones mit bis zu 3A<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -179,32 +94,480 @@
       "block_order": [
         "column1",
         "column2",
-        "column3"
+        "column3",
+        "b31d361c-50f5-44df-b00a-571c434be70b"
+      ],
+      "settings": {
+        "title": "fair. reparierbar. made in Germany.",
+        "heading_size": "h0",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Mehr erfahren",
+        "button_link": "shopify:\/\/pages\/recable-usb-ladekabel-nachhaltigkeit",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16479408091bca9c2f": {
+      "type": "featured-product",
+      "blocks": {
+        "16479408095c33ebe2-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "16479408095c33ebe2-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "16479408095c33ebe2-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "16479408095c33ebe2-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "16479408095c33ebe2-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "16479408095c33ebe2-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "16479408095c33ebe2-1",
+        "16479408095c33ebe2-2",
+        "16479408095c33ebe2-3",
+        "16479408095c33ebe2-4",
+        "16479408095c33ebe2-6",
+        "16479408095c33ebe2-7"
+      ],
+      "settings": {
+        "product": "1-m-usb-kabel-passt-immer",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16606316225cfc99ed": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featherless",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1655380990611fc788": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"collection-list-wrapper page-width isolate no-mobile-link\">\n    <div class=\"title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin\">\n        <h2 class=\"collection-list-title h1\">Unsere farbigen USB-Kabel-Vögel<\/h2>\n    <\/div>\n\n    <div class=\"cat-listing\">\n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-eisvogel\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Eisvogel_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Eisvogel\">\n                <span class=\"title\">Eisvogel<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-kubaflamingo\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Kubaflamingo_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Kubaflamingo\">\n                <span class=\"title\">Kubaflamingo<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-konigspinguin\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Koenigspinguin_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Königspinguin\">\n                <span class=\"title\">Königs­pinguin<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-gelbbrustara\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Gelbbrustara_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Gelbbrustara\">\n                <span class=\"title\">Gelb­brustara<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-wasserhahn\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Wasserhahn_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Wasserhahn\">\n                <span class=\"title\">Wasser­hahn<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-goldschnapper\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Goldschnaepper_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Goldschnäpper\">\n                <span class=\"title\">Gold­schnäpper<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-turkisnaschvogel\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Tuerkisnaschvogel_transparent-min.png?v=1642679252\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Türkisnaschvogel\">\n                <span class=\"title\">Türkis­naschvogel<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-unzertrennliche\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Unzertrennliche_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Unzertrennliche\">\n                <span class=\"title\">Unzer­trennliche<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-gouldamadine\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Gouldamadine_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Gouldamadine\">\n                <span class=\"title\">Gould­amadine<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-weissruckenspecht\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Weissrueckenspecht_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Weißrückenspecht\">\n                <span class=\"title\">Weißrücken­specht<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-pfau\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Pfau_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Pfau\">\n                <span class=\"title\">Pfau<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-flammenlaubenvogel\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Flammenlaubenvogel_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Flammenlaubenvogel\">\n                <span class=\"title\">Flammen­laubenvogel<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-gelbkehlvireo\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Gelbkehlvireo_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Gelbkehlvireo\">\n                <span class=\"title\">Gelb­kehlvireo<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-kakapo\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Kakapo_transparent-min.png?v=1642679252\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Kakapo\">\n                <span class=\"title\">Kakapo<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-helmkasuar\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Helmkasuar_transparent-min.png?v=1642679250\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Helmkasuar\">\n                <span class=\"title\">Helm­kasuar<\/span>\n            <\/a>\n        <\/div>\n        \n        <div class=\"cat\">\n            <a href=\"\/collections\/unsere-bunten-vogel\/design-blaumeise\">\n                <img class=\"zoom\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Blaumeise_transparent-min.png?v=1642679251\" loading=\"lazy\" width=\"550\" height=\"550\" alt=\"recable Blaumeise\">\n                <span class=\"title\">Blau­meise<\/span>\n            <\/a>\n        <\/div>\n    <\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16479413185ccb131a": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "1647941318c1b10a1a-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "eisvogel"
+          }
+        },
+        "1647941318c1b10a1a-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kubaflamingo"
+          }
+        },
+        "1647941318c1b10a1a-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "konigspinguin"
+          }
+        },
+        "2fb382b2-2828-4615-a773-a36dd6b22373": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gelbbrustara"
+          }
+        },
+        "bec7b914-0b9e-4d77-9add-b8901b4c50f3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wasserhahn"
+          }
+        },
+        "219d05cd-063e-4521-bd02-c058142195a8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "goldschnapper"
+          }
+        },
+        "0a48a4a3-9e56-44ba-a29f-130b7e8f274b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "turkisnaschvogel"
+          }
+        },
+        "82944953-0086-46a7-9ad9-7521f4d59718": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "unzertrennliche"
+          }
+        }
+      },
+      "block_order": [
+        "1647941318c1b10a1a-0",
+        "1647941318c1b10a1a-1",
+        "1647941318c1b10a1a-2",
+        "2fb382b2-2828-4615-a773-a36dd6b22373",
+        "bec7b914-0b9e-4d77-9add-b8901b4c50f3",
+        "219d05cd-063e-4521-bd02-c058142195a8",
+        "0a48a4a3-9e56-44ba-a29f-130b7e8f274b",
+        "82944953-0086-46a7-9ad9-7521f4d59718"
+      ],
+      "settings": {
+        "title": "Unsere farbigen USB-Kabel-Vögel",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1648108829879653ec": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648108829bb663f1a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Noch nicht genug Auswahl?",
+            "heading_size": "h1"
+          }
+        },
+        "1648108829bb663f1a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Im Konfigurator kannst Du spielend einfach Dein eigenes USB-Kabel für Dein Smartphone individualisieren.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1648108829bb663f1a-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt probieren",
+            "button_link": "shopify:\/\/products\/personalisierte-ladekabel"
+          }
+        }
+      },
+      "block_order": [
+        "1648108829bb663f1a-0",
+        "1648108829bb663f1a-1",
+        "1648108829bb663f1a-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recable_konfigurator.gif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "1648108776e768add9": {
+      "type": "multicolumn",
+      "blocks": {
+        "1648108776af2e97c3-0": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<p>„Ich freue mich, dass mein Handy nicht an irgendeinem Kabel einer dieser Gigafirmen lädt, sondern an etwas, was meinen Werten entspricht.“<\/p><p><\/p><p><em>Mud<\/em><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1648108776af2e97c3-1": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<p>„Für mich der Clou: die vielen Farbkombinationen! So habe ich mein individuelles Ladekabel mit garantiertem Wiedererkennungswert.“<\/p><p><\/p><p><em>Stefanie<\/em><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1648108776af2e97c3-2": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<p>„Sieht einfach toll aus und ist gleichzeitig auch noch nachhaltig und funktioniert perfekt! Ich hätte wirklich keine bessere Wahl treffen können!“<\/p><p><\/p><p><em>Leah<\/em><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1648108776af2e97c3-0",
+        "1648108776af2e97c3-1",
+        "1648108776af2e97c3-2"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "column_alignment": "center",
+        "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "165944308140e567ac": {
+      "type": "image-with-text",
+      "blocks": {
+        "165944308175c95360-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "45,3 % weniger CO₂",
+            "heading_size": "h1"
+          }
+        },
+        "165944308175c95360-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der CO₂-Fußabdruck unserer USB-Kabel ist um 45,3 % kleiner als der von handelsüblichen Kabeln.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "165944308175c95360-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Mehr erfahren",
+            "button_link": "shopify:\/\/pages\/co2-bilanz"
+          }
+        }
+      },
+      "block_order": [
+        "165944308175c95360-0",
+        "165944308175c95360-1",
+        "165944308175c95360-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/co2_bilanz.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1648105106e5125121": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648105106d4cb2060-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "1 Kabel = 1 voller Schnabel",
+            "heading_size": "h1"
+          }
+        },
+        "1648105106d4cb2060-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mit dem Kauf unserer USB-Kabel machst Du Wildvögel satt! Wir spenden je Verkauf eine Tagesration Futter.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1648105106d4cb2060-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Mehr erfahren",
+            "button_link": "shopify:\/\/pages\/wildvogelhilfe"
+          }
+        }
+      },
+      "block_order": [
+        "1648105106d4cb2060-0",
+        "1648105106d4cb2060-1",
+        "1648105106d4cb2060-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/wildvogelhilfe_4c9e87ec-237a-4379-aa6c-1e0aa98fdaba.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "164810520053e7bed9": {
+      "type": "image-with-text",
+      "blocks": {
+        "1648105199ad51afab-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Mission",
+            "heading_size": "h1"
+          }
+        },
+        "1648105199ad51afab-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>9 Herzen, ein Ziel: endlich mehr Nachhaltigkeit und faire Arbeitsbedigungen bei Technikprodukten.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1648105199ad51afab-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Mehr erfahren",
+            "button_link": "shopify:\/\/pages\/mission"
+          }
+        }
+      },
+      "block_order": [
+        "1648105199ad51afab-0",
+        "1648105199ad51afab-1",
+        "1648105199ad51afab-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recable_team_2022_06.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "16481058868cfddcb8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"banner-yellow\">\n<div class=\"page-width\"><div class=\"title\"><h2>ausgezeichnet als nachhaltiges Produkt<\/h2><\/div>\n<div class=\"logo\"><a href=\"https:\/\/www.recable.it\/pages\/gp-award-2022\" target=\"_blank\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/icon_gpaward2022.png?v=1652699400\" alt=\"recable nachhaltige USB-Kabel beim Green Product Award 2022\"><\/a><\/div>\n<div class=\"logo\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/Green_Innovator_des_Jahres_2022.png?v=1660578269\" alt=\"Green Innovator des Jahres 2022\"><\/div>\n<div class=\"logo\"><a href=\"https:\/\/www.recable.it\/pages\/bestform\" target=\"_blank\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0364\/2585\/9131\/files\/icon_bestform2021.png?v=1635183885\" alt=\"recable beim BEST FORM AWARD 2021\"><\/a><\/div>\n<\/div>\n<\/div>\n\n<style><!--\n.logo { padding-right: 1em; padding-left: 1em; }\n--><\/style>",
+        "color_scheme": "accent-1",
+        "padding_top": 28,
+        "padding_bottom": 44
+      }
+    },
+    "164810542971010a29": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Gezwitscher",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_view_all": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1661245442bcc1dfd7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!--Trustami Vertrauenssiegel Leiste-->\n<div class=\"widget_container_frame\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "multicolumn",
+    "16479408091bca9c2f",
+    "16606316225cfc99ed",
+    "1655380990611fc788",
+    "16479413185ccb131a",
+    "1648108829879653ec",
+    "1648108776e768add9",
+    "165944308140e567ac",
+    "1648105106e5125121",
+    "164810520053e7bed9",
+    "16481058868cfddcb8",
+    "164810542971010a29",
+    "1661245442bcc1dfd7"
   ]
 }
