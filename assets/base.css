@@ -32,7 +32,8 @@
 }
 
 .color-accent-2-light {
-    background: #e2f2f1;
+  --color-background: 226, 242, 241;
+  --gradient-background: rgb(226, 242, 241);
 }
 
 .color-foreground-outline-button {
