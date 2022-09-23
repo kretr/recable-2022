@@ -2876,6 +2876,56 @@ details-disclosure > details {
 }
 
 
+/* Allgemein */
+
+.main-page-title, section .multicolumn .title, section .collection-list-title, section .blog__title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card__heading {
+  font-size: 2rem;
+}
+
+.card__heading small {
+  font-size: 1.6rem;
+}
+
+.responsive-container {
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.responsive-container > iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  left: 0;
+}
+
+.responsive-container > .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .5em;
+  text-align: center;
+}
+
+table.no-borders {
+  width: 100%;
+}
+  
+table.no-borders td {
+  border: none;
+}
+
 /* Startseite */
 
 #Banner-template--16096813383945__image_banner {
@@ -3250,4 +3300,30 @@ details-disclosure > details {
     width: 320px;
     flex-shrink: 0;
   }
+}
+
+/* Sonstiges */
+
+.material {
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 768px){
+  .material {
+    display: flex;
+  }
+
+  .material .item {
+    width: 33.33%;
+    outline: 1px solid #aeaeae;
+    padding: 1em;
+  }
+
+  .material .item + .item {
+    outline-left-width: 0px;
+  }
+}
+
+.shopify-policy__body {
+  margin-bottom: 2.5em;
 }
