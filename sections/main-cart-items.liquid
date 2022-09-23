@@ -57,9 +57,9 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-mczr="{% if item.properties._mczr_designId %}item-{{ item.properties._mczr_designId }}{% else %}item-not-mczr{% endif %}">
                   <td class="cart-item__media">
-                    {% if item.image %}
+                    {% if item.image or item.properties._mczr_designId %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                       <a href="{{ item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
                         <div class="cart-item__image-container gradient global-media-settings">
@@ -68,8 +68,7 @@
                             alt="{{ item.image.alt | escape }}"
                             loading="lazy"
                             width="150"
-                            height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
-                          >
+                            height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}" data-mczr="{% if item.properties._mczr_designId %}item_image-{{ item.properties._mczr_designId }}{% else %}item_image-not-mczr{% endif %}">
                         </div>
                     {% endif %}
                   </td>
@@ -79,7 +78,7 @@
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
-                    <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+                    <a href="{{ item.url }}" class="cart-item__name h4 break" data-mczr="{% if item.properties._mczr_designId %}item_product_title-{{ item.properties._mczr_designId }}{% else %}item_product_title-not-mczr{% endif %}">{{ item.product.title | escape }}</a>
 
                     {%- if item.original_price != item.final_price -%}
                       <div class="cart-item__discounted-prices">
@@ -92,13 +91,13 @@
                         <span class="visually-hidden">
                           {{ 'products.product.price.sale_price' | t }}
                         </span>
-                        <strong class="cart-item__final-price product-option">
+                        <strong class="cart-item__final-price product-option" data-mczr="{% if item.properties._mczr_designId %}item_final_price-{{ item.properties._mczr_designId }}{% else %}item_final_price-not-mczr{% endif %}">
                           {{ item.final_price | money }}
                         </strong>
                       </div>
                     {%- else -%}
-                      <div class="product-option">
-                        {{ item.original_price | money }}
+                      <div class="product-option" data-mczr="{% if item.properties._mczr_designId %}item_original_price-{{ item.properties._mczr_designId }}{% else %}item_original_price-not-mczr{% endif %}">
+                        <span data-mczr="{% if item.properties._mczr_designId %}item_original_price-{{ item.properties._mczr_designId }}{% else %}item_original_price-not-mczr{% endif %}">{{ item.original_price | money }}</span>
                       </div>
                     {%- endif -%}
 
@@ -160,20 +159,20 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money }}
+                            <s class="cart-item__old-price price price--end" data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">
+                              <span data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">{{ item.original_line_price | money }}</span>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price price--end" data-mczr="{% if item.properties._mczr_designId %}item_final_line_price-{{ item.properties._mczr_designId }}{% else %}item_final_line_price-not-mczr{% endif %}">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
-                          {{ item.original_line_price | money }}
+                        <span class="price price--end" data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">
+                          <span data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">{{ item.original_line_price | money }}</span>
                         </span>
                       {%- endif -%}
 
@@ -250,20 +249,20 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money }}
+                            <s class="cart-item__old-price price price--end" data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">
+                              <span data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">{{ item.original_line_price | money }}</span>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price price--end" data-mczr="{% if item.properties._mczr_designId %}item_final_line_price-{{ item.properties._mczr_designId }}{% else %}item_final_line_price-not-mczr{% endif %}">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
-                          {{ item.original_line_price | money }}
+                        <span class="price price--end" data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">
+                          <span data-mczr="{% if item.properties._mczr_designId %}item_original_line_price-{{ item.properties._mczr_designId }}{% else %}item_original_line_price-not-mczr{% endif %}">{{ item.original_line_price | money }}</span>
                         </span>
                       {%- endif -%}
 
@@ -331,3 +330,5 @@
   ]
 }
 {% endschema %}
+
+{% render "cart-script.mczr" %}
