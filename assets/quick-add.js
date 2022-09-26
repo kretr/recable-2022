@@ -69,6 +69,12 @@ if (!customElements.get('quick-add-modal')) {
 
       const productModal = this.productElement.querySelector('product-modal');
       if (productModal) productModal.remove();
+
+      const tabCollection = this.productElement.querySelector('.tab-collection');
+      if (tabCollection) tabCollection.remove();
+
+      const keyProductFeatures = this.productElement.querySelector('.key-product-features');
+      if (keyProductFeatures) keyProductFeatures.remove();
     }
 
     preventDuplicatedIDs() {
