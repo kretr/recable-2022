@@ -78,6 +78,12 @@ if (!customElements.get('quick-add-modal')) {
 
         const modalDialog = this.productElement.querySelectorAll('modal-dialog');
         if (modalDialog) modalDialog.forEach((modal) => modal.remove());
+
+        const tabCollection = this.productElement.querySelector('.tab-collection');
+        if (tabCollection) tabCollection.remove();
+
+        const keyProductFeatures = this.productElement.querySelector('.key-product-features');
+        if (keyProductFeatures) keyProductFeatures.remove();
       }
 
       preventDuplicatedIDs() {
