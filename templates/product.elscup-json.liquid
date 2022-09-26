@@ -10,6 +10,6 @@
 "id": {{product.id}},
 "handle": "{{product.handle}}",
 "product_sales": {% if productSales %}{{productSales | json}}{% else %}{}{% endif %},
-"aggregated_sales": {% if shop.metafields.elscup.aggregated_sales %}{{ shop.metafields.elscup.aggregated_sales | json }}{% else %}{}{% endif %}
+"aggregated_sales": {% if shop.metafields.elscup.aggregated_sales.value != blank %}{{ shop.metafields.elscup.aggregated_sales.value | json }}{% else %}{% if shop.metafields.elscup.aggregated_sales %}{{ shop.metafields.elscup.aggregated_sales | json }}{% else %}{}{% endif %}{% endif %}
 }
 {% endcapture %}{{ output | strip_newlines }}
