@@ -140,3 +140,8 @@
   content: "";
   background: var(--icon-lightning) left center/contain no-repeat;
 }
+
+#MegaMenu-Content-1 > ul > li:not(:nth-child(3)) ul li:nth-child(5) a::after {
+  content: "";
+  background: var(--icon-usb-c) left center/contain no-repeat;
+}
