@@ -2,13 +2,14 @@
     Renders an article card for a given blog with settings to either show the image or not.
 
     Accepts:
-    - region: {String} Product Liquid object (optional)
+    - product_variant: {Object} Shopify product variant object
+    - region: {String} Customer region string (optional)
 
     Usage:
-    {% render 'product-delivery-time' region: 'de' %}
+    {% render 'product-delivery-time' product_variant: product.selected_or_first_available_variant, region: 'de' %}
 {% endcomment %}
 
-{%- if product and product != empty -%}
+{%- if product_variant and product_variant != empty -%}
   {% liquid
     assign treshold = 0
     assign delivery_time_de_instock = '14 Werktage'
@@ -21,20 +22,26 @@
     assign delivery_time_instock = collections['alles'].metafields.my_fields.lieferzeit_lagernd
     assign delivery_time = collections['alles'].metafields.my_fields.lieferzeit
 
-    assign product_variant = product.selected_or_first_available_variant
-
     if product_variant.inventory_quantity > 500
       assign treshold = 1000
     endif
   %}
 
-  {% if product_variant.inventory_quantity > treshold and region == 'de' %}
-    {{ delivery_time_de_instock }}
-  {% elsif product_variant.inventory_quantity > treshold %}
-    {{ delivery_time_instock }}
-  {% elsif product_variant.inventory_quantity <= treshold and region == 'de' %}
-    {{ delivery_time_de }}
+  {% if product_variant.inventory_management == 'shopify' %}
+    {% if product_variant.inventory_quantity > treshold and region == 'de' %}
+      {{ delivery_time_de_instock }}
+    {% elsif product_variant.inventory_quantity > treshold %}
+      {{ delivery_time_instock }}
+    {% elsif product_variant.inventory_quantity <= treshold and region == 'de' %}
+      {{ delivery_time_de }}
+    {% else %}
+      {{ delivery_time }}
+    {% endif %}
   {% else %}
-    {{ delivery_time }}
+    {% if region == 'de' %}
+      {{ delivery_time_de_instock }}
+    {% else %}
+      {{ delivery_time_instock }}
+    {% endif %}
   {% endif %}
 {%- endif -%}

@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Lieferzeit",
             "icon": "none",
-            "custom_liquid": "<p>Fairness und Nachhaltigkeit brauchen Ihre Zeit. Erst wenn Du Dein recable bestellst, entsteht es. Mit On-Demand-Fertigung verhindern wir Überproduktionen und sagen damit gemeinsam mit Dir \nElektroschrott den Kampf an. Das heißt aber auch: Bitte habe etwas Geduld. Wir schicken Dein recable so schnell es geht auf die Reise.<\/p>\n<p>Konkret bedeutet das folgende Lieferzeiten<\/p>\n<p>Deutschland: <strong>{% render 'product-delivery-time' region: 'de' %}<\/strong><br \/>\nInternational: <strong>{% render 'product-delivery-time' region: 'world' %}<\/strong><\/p>\n<p>14 Tage Rückgaberecht<\/p>",
+            "custom_liquid": "<p>Fairness und Nachhaltigkeit brauchen Ihre Zeit. Erst wenn Du Dein recable bestellst, entsteht es. Mit On-Demand-Fertigung verhindern wir Überproduktionen und sagen damit gemeinsam mit Dir \nElektroschrott den Kampf an. Das heißt aber auch: Bitte habe etwas Geduld. Wir schicken Dein recable so schnell es geht auf die Reise.<\/p>\n<p>Konkret bedeutet das folgende Lieferzeiten<\/p>\n<p>Deutschland: <strong>{% render 'product-delivery-time' product_variant: product.selected_or_first_available_variant, region: 'de' %}<\/strong><br \/>\nInternational: <strong>{% render 'product-delivery-time' product_variant: product.selected_or_first_available_variant, region: 'world' %}<\/strong><\/p>\n<p>14 Tage Rückgaberecht<\/p>",
             "content": "",
             "page": ""
           }
