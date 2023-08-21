@@ -164,9 +164,9 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/recable-110947587353322",
+    "social_facebook_link": "https:\/\/www.facebook.com\/recable.eu",
     "social_pinterest_link": "",
-    "social_instagram_link": "https:\/\/www.instagram.com\/recable.it\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/recable.eu\/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
@@ -197,15 +197,25 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "kostenfreier Versand ab 50€ Einkaufswert",
+              "text": "ab 60€ versandkostenfrei bestellen",
               "color_scheme": "background-2",
               "link": "shopify:\/\/policies\/shipping-policy"
+            }
+          },
+          "c4475506-7ed4-4435-abab-4ac54ac8d9cd": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "COLORFUL WEEK DEAL: 2 Kabel kaufen, 1 Charger gratis! (23.-29.11.2022)",
+              "color_scheme": "accent-1",
+              "link": ""
             }
           }
         },
         "block_order": [
           "e9c020cd-87ae-4931-a3ad-324d2347a0a4",
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "c4475506-7ed4-4435-abab-4ac54ac8d9cd"
         ],
         "settings": {
         }
